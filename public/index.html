@@ -8,16 +8,17 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <textarea id="receiveSDP"></textarea>
         <video id="local" autoplay></video>
         <video id="remote" autoplay></video>
         <textarea></textarea>
         <button
-            onclick="() => {
+            onclick="(() => {
             const textarea = document.querySelector('textarea')
             eval(textarea.value)
-        }"
-        ></button>
+        })()"
+        >
+            Run
+        </button>
         <script src="bundle.js"></script>
     </body>
 </html>
