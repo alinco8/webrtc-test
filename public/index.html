@@ -6,19 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>WebRTC</title>
         <link rel="stylesheet" href="style.css" />
+        <script src="/socket.io/socket.io.js"></script>
     </head>
     <body>
         <video id="local" autoplay></video>
         <video id="remote" autoplay></video>
-        <textarea></textarea>
-        <button
-            onclick="(() => {
-            const textarea = document.querySelector('textarea')
-            eval(textarea.value)
-        })()"
-        >
-            Run
-        </button>
+        <select id="select">
+            <option value="offer">Offer</option>
+            <option value="answer">Answer</option>
+        </select>
+        <button id="connection">Create Connection</button>
+        <button id="offer">Create Offer</button>
         <script src="bundle.js"></script>
     </body>
 </html>
